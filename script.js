@@ -11,4 +11,21 @@ const isPrime = (number)=>{
     return true
     }
 
-console.log(isPrime(43))
+    const primeFactors= (n) =>{
+        var factors = [], 
+            divisor = 2;
+        
+        while(n>2){
+          if(n % divisor == 0){
+           !factors.includes(divisor) && factors.push(divisor); 
+             n= n/ divisor;
+          }
+          else{
+            divisor++;
+          }     
+        }
+        return factors;
+      }
+
+      console.log(isPrime(7))
+      console.log(primeFactors(69))
