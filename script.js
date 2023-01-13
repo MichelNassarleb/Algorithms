@@ -41,8 +41,24 @@ const isPrime = (number)=>{
       else
         return fibonacci(n-1) + fibonacci (n-2);  
     }
-    
-      console.log(isPrime(7))
-      console.log(primeFactors(69))
-      console.log(getFibonacciNumber(0))
-      console.log(fibonacci(12))
+    const getGreatestCommonDivisor = (a,b) =>{
+      var divisor = 2;
+      let greatestDivisor
+      if(a<2 || b<2){
+          return 1;
+      }
+  
+      while(a >= divisor && b >= divisor){
+          if(a % divisor == 0 && b % divisor == 0){
+              greatestDivisor = divisor
+          }
+          divisor++
+      }
+      return greatestDivisor
+  }
+  
+      console.log(isPrime(7)) // true
+      console.log(primeFactors(69)) // [3,23]
+      console.log(getFibonacciNumber(0)) // 0
+      console.log(fibonacci(12)) // 144
+      console.log(getGreatestCommonDivisor(20,25)) //5
