@@ -35,6 +35,14 @@ const isPrime = (number)=>{
         }
         return fibonaccis[index-1]
     }
+    const  fibonacci = (n) => {
+      if(n<=1)
+        return n;
+      else
+        return fibonacci(n-1) + fibonacci (n-2);  
+    }
+    
       console.log(isPrime(7))
       console.log(primeFactors(69))
       console.log(getFibonacciNumber(0))
+      console.log(fibonacci(12))
