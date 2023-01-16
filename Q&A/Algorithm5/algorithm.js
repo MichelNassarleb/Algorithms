@@ -5,7 +5,7 @@
 //(that will tell me element added once.). if i find a element in the exists object, 
 //i will not insert it into the return array.
 
-function removeDuplicate(arr) {
+const removeDuplicate = (arr) => {
     var exists = {},
         outArr = [],
         elm;
