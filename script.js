@@ -56,7 +56,7 @@ const getGreatestCommonDivisor = (a, b) => {
   }
   return greatestDivisor
 }
-function removeDuplicate(arr) {
+const removeDuplicate = (arr) => {
   var exists = {},
     outArr = [],
     elm;
@@ -70,9 +70,32 @@ function removeDuplicate(arr) {
   }
   return outArr;
 }
-console.log('a', removeDuplicate([1, 1, 2, 2, 2, 3, 3, 5]))
-console.log(isPrime(7)) // true
-console.log(primeFactors(69)) // [3,23]
-console.log(getFibonacciNumber(0)) // 0
-console.log(fibonacci(12)) // 144
-console.log(getGreatestCommonDivisor(20, 25)) //5
+
+const mergeSortedArrays = (arr1, arr2) => {
+  const mergedArray = []
+  aElm = arr1[0]
+  bElm = arr2[0]
+  let i = 0;
+  let j = 0;
+  if (arr1.length == 0)
+    return arr2;
+  if (arr2.length == 0)
+    return arr1;
+  while (aElm || bElm) {
+    if (aElm && !bElm || aElm < bElm) {
+      mergedArray.push(aElm)
+      aElm = arr1[i++]
+    } else {
+      mergedArray.push(bElm)
+      bElm = arr2[j++]
+    }
+  }
+  return mergedArray
+}
+console.log('merge sorted arrays', mergeSortedArrays([2, 5, 6, 9], [1, 2, 3, 29])) // [1, 1, 2, 2, 2, 3, 5, 6, 9, 29]
+console.log('remove duplicate', removeDuplicate([1, 1, 2, 2, 2, 3, 3, 5])) // [1,2,3,5]
+console.log('is prime', isPrime(7)) // true
+console.log('prime factors', primeFactors(69)) // [3,23]
+console.log('get fibonacci number', getFibonacciNumber(0)) // 0
+console.log('fibonacci index', fibonacci(12)) // 144
+console.log('get greatest common divisor', getGreatestCommonDivisor(20, 25)) //5
