@@ -92,7 +92,7 @@ const mergeSortedArrays = (arr1, arr2) => {
   }
   return mergedArray
 }
-console.log('merge sorted arrays', mergeSortedArrays([2, 5, 6, 9], [1, 2, 3, 29])) // [1, 1, 2, 2, 2, 3, 5, 6, 9, 29]
+console.log('merge sorted arrays', mergeSortedArrays([2, 5, 6, 9], [1, 2, 3, 29])) // [1,1, 2, 2, 2, 3, 5, 6, 9, 29]
 console.log('remove duplicate', removeDuplicate([1, 1, 2, 2, 2, 3, 3, 5])) // [1,2,3,5]
 console.log('is prime', isPrime(7)) // true
 console.log('prime factors', primeFactors(69)) // [3,23]
