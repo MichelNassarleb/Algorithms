@@ -92,6 +92,12 @@ const mergeSortedArrays = (arr1, arr2) => {
   }
   return mergedArray
 }
+const swapNumbers = (a, b) => {
+  a = a ^ b;
+  b = a ^ b;
+  a = a ^ b;
+  return `a:${a}, b:${b}`
+}
 console.log('merge sorted arrays', mergeSortedArrays([2, 5, 6, 9], [1, 2, 3, 29])) // [1,1, 2, 2, 2, 3, 5, 6, 9, 29]
 console.log('remove duplicate', removeDuplicate([1, 1, 2, 2, 2, 3, 3, 5])) // [1,2,3,5]
 console.log('is prime', isPrime(7)) // true
@@ -99,3 +105,4 @@ console.log('prime factors', primeFactors(69)) // [3,23]
 console.log('get fibonacci number', getFibonacciNumber(0)) // 0
 console.log('fibonacci index', fibonacci(12)) // 144
 console.log('get greatest common divisor', getGreatestCommonDivisor(20, 25)) //5
+console.log(swapNumbers(5, 6))
