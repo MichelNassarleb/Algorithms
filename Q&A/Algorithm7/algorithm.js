@@ -8,6 +8,7 @@ const swapNumbers = (a, b) => {
     return `a:${a}, b:${b}`
 }
 
+//Answer: Use plus and minus math operators to solve it
 const swapNumbers2 = (a, b) => {
     console.log('before swap: ', 'a: ', a, 'b: ', b);
     b = b - a;
