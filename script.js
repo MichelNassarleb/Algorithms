@@ -120,6 +120,19 @@ const reverseWords = (phrase) => {
   return reversedWords.join(' ')
 }
 
+const reverseWordsInPlace = (phrase) => {
+  const splittedPhrase = phrase.split(' ')
+  let k = 0;
+  let reversedPhraseInPlace = [];
+  for (let i = 0; i <= splittedPhrase.length - 1; i++) {
+    for (let j = splittedPhrase[i].length - 1; j >= 0; j--) {
+      reversedPhraseInPlace[i] += splittedPhrase?.[i]?.split('')?.[j]
+      k++
+    }
+  }
+  return reversedPhraseInPlace.join(' ')
+}
+console.log('reversed words in place:', reverseWordsInPlace('Michel is a code addict!'))
 console.log('reversed words:', reverseWords('Michel Nassar is a code addict!'))
 console.log('reversed string:', reverseString('Javascript')) //tpircsavaJ
 console.log('merge sorted arrays', mergeSortedArrays([2, 5, 6, 9], [1, 2, 3, 29])) // [1,1, 2, 2, 2, 3, 5, 6, 9, 29]
