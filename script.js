@@ -109,6 +109,18 @@ const reverseString = (str) => {
   return reversedString.join('')
 }
 
+const reverseWords = (phrase) => {
+  let reversedWords = []
+  let j = 0;
+  let phraseSplitted = phrase.split(' ');
+  for (let i = phraseSplitted.length - 1; i >= 0; i--) {
+    reversedWords[j] = phraseSplitted[i]
+    j++
+  }
+  return reversedWords.join(' ')
+}
+
+console.log('reversed words:', reverseWords('Michel Nassar is a code addict!'))
 console.log('reversed string:', reverseString('Javascript')) //tpircsavaJ
 console.log('merge sorted arrays', mergeSortedArrays([2, 5, 6, 9], [1, 2, 3, 29])) // [1,1, 2, 2, 2, 3, 5, 6, 9, 29]
 console.log('remove duplicate', removeDuplicate([1, 1, 2, 2, 2, 3, 3, 5])) // [1,2,3,5]
