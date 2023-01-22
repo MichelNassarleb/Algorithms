@@ -98,6 +98,18 @@ const swapNumbers = (a, b) => {
   a = a ^ b;
   return `a:${a}, b:${b}`
 }
+const reverseString = (str) => {
+  let reversedString = []
+  let j = 0
+  for (let i = str.length; i >= 0; i--) {
+    reversedString[j] = str[i]
+    j++
+  }
+
+  return reversedString.join('')
+}
+
+console.log('reversed string:', reverseString('Javascript')) //tpircsavaJ
 console.log('merge sorted arrays', mergeSortedArrays([2, 5, 6, 9], [1, 2, 3, 29])) // [1,1, 2, 2, 2, 3, 5, 6, 9, 29]
 console.log('remove duplicate', removeDuplicate([1, 1, 2, 2, 2, 3, 3, 5])) // [1,2,3,5]
 console.log('is prime', isPrime(7)) // true
