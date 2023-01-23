@@ -136,6 +136,24 @@ const reverseWordsInPlace = (phrase) => {
   }
   return reversedPhraseInPlace.join(' ')
 }
+
+const findFirstNonRepeatingChat = (str) => {
+  const numOfChars = {}
+  if (str.length == 1) {
+    return str[0]
+  }
+  for (let i = 0; i < str.length; i++) {
+    if (!numOfChars[str[i]]) numOfChars[str[i]] = 1
+    else numOfChars[str[i]]++
+  }
+  let j = 0
+  const numOfcharKeys = Object.keys(numOfChars)
+  while (numOfChars[numOfcharKeys[j]] != 1) {
+    j++
+  }
+  return numOfcharKeys[j]
+}
+console.log(findFirstNonRepeatingChat('the quick brown fox jumps then quickly blow air')) // f
 console.log('reversed words in place:', reverseWordsInPlace('Michel is a code addict!'))
 console.log('reversed words:', reverseWords('Michel Nassar is a code addict!'))
 console.log('reversed string:', reverseString('Javascript')) //tpircsavaJ
