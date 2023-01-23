@@ -170,7 +170,7 @@ const removeDuplicateChars = (str) => {
   return newStr.join('')
 }
 console.log('remove duplicate characters:', removeDuplicateChars('thee quiickk brownn')) //thqucbrow
-console.log(findFirstNonRepeatingChat('the quick brown fox jumps then quickly blow air')) // f
+console.log('return first non repeating character', findFirstNonRepeatingChat('the quick brown fox jumps then quickly blow air')) // f
 console.log('reversed words in place:', reverseWordsInPlace('Michel is a code addict!'))
 console.log('reversed words:', reverseWords('Michel Nassar is a code addict!'))
 console.log('reversed string:', reverseString('Javascript')) //tpircsavaJ
