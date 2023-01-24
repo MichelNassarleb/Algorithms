@@ -169,6 +169,18 @@ const removeDuplicateChars = (str) => {
   }
   return newStr.join('')
 }
+const isPalindrome = (str) => {
+  let reveresedStrArray = [];
+  let j = 0
+  for (let i = str.length - 1; i >= 0; i--) {
+    reveresedStrArray[j] = str[i]
+    j++
+  }
+  const reversedWord = reveresedStrArray.join('')
+  if (reversedWord == str) return true
+  else return false
+}
+console.log(isPalindrome('dodsss'))
 console.log('remove duplicate characters:', removeDuplicateChars('thee quiickk brownn')) //thqucbrow
 console.log('return first non repeating character', findFirstNonRepeatingChat('the quick brown fox jumps then quickly blow air')) // f
 console.log('reversed words in place:', reverseWordsInPlace('Michel is a code addict!'))
