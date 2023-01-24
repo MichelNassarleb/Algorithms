@@ -180,7 +180,24 @@ const isPalindrome = (str) => {
   if (reversedWord == str) return true
   else return false
 }
-console.log(isPalindrome('dodsss'))
+let arr = []
+for (let i = 1; i < 101; i++) {
+  if (i == 44) console.log(i)
+  else arr.push(i)
+}
+const findMissingNumber = (array) => {
+  let foundNums = {}
+  for (let j = 1; j < 101; j++) {
+    if (array.includes(j)) foundNums[j] = 1
+    else foundNums[j] = 0
+  }
+  for (var k in foundNums) {
+    if (foundNums[k] == 0) return k
+  }
+}
+
+console.log('Missing number is', findMissingNumber(arr)) // 44
+console.log('is palindrome?:', isPalindrome('madam'))//true
 console.log('remove duplicate characters:', removeDuplicateChars('thee quiickk brownn')) //thqucbrow
 console.log('return first non repeating character', findFirstNonRepeatingChat('the quick brown fox jumps then quickly blow air')) // f
 console.log('reversed words in place:', reverseWordsInPlace('Michel is a code addict!'))
