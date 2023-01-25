@@ -195,7 +195,22 @@ const findMissingNumber = (array) => {
     if (foundNums[k] == 0) return k
   }
 }
+const sumFinder = (arr, sum) => {
+  var forLength = arr.length - 1;
 
+  for (let i = 0; i <= forLength; i++) {
+    for (let j = i + 1; j <= forLength; j++) {
+      if ((arr[i] + arr[j]) == sum) {
+        return `true, ${arr[i]},${arr[j]}`
+      }
+    }
+  }
+
+  return false
+
+
+}
+console.log('Sum finder', sumFinder([0, 3, 7, 4], 7))
 console.log('Missing number is', findMissingNumber(arr)) // 44
 console.log('is palindrome?:', isPalindrome('madam'))//true
 console.log('remove duplicate characters:', removeDuplicateChars('thee quiickk brownn')) //thqucbrow
