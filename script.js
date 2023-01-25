@@ -210,6 +210,18 @@ const sumFinder = (arr, sum) => {
 
 
 }
+
+const numberOfZeros = (number) => {
+  var count = 0;
+  while (number > 0) {
+    count += Math.floor(number / 10)
+    number = number / 10
+  }
+  return count
+}
+
+
+console.log(numberOfZeros(100))//11
 console.log('Sum finder', sumFinder([6, 4, 3, 2, 1, 7], 9))//6,3
 console.log('Missing number is', findMissingNumber(arr)) // 44
 console.log('is palindrome?:', isPalindrome('madam'))//true
