@@ -210,7 +210,7 @@ const sumFinder = (arr, sum) => {
 
 
 }
-console.log('Sum finder', sumFinder([0, 3, 7, 4], 7))
+console.log('Sum finder', sumFinder([6, 4, 3, 2, 1, 7], 9))//6,3
 console.log('Missing number is', findMissingNumber(arr)) // 44
 console.log('is palindrome?:', isPalindrome('madam'))//true
 console.log('remove duplicate characters:', removeDuplicateChars('thee quiickk brownn')) //thqucbrow
@@ -225,4 +225,4 @@ console.log('prime factors', primeFactors(69)) // [3,23]
 console.log('get fibonacci number', getFibonacciNumber(0)) // 0
 console.log('fibonacci index', fibonacci(12)) // 144
 console.log('get greatest common divisor', getGreatestCommonDivisor(20, 25)) //5
-console.log(swapNumbers(5, 6))
+console.log(swapNumbers(5, 6))// 6,5
