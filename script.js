@@ -223,7 +223,7 @@ const numberOfZeros = (number) => {
 function sortArrayOfNumbers(arr) {
   return arr.sort((a, b) => a - b)
 }
-console.log(sortArrayOfNumbers([4, 1, 2]))//[1,2,4]
+console.log(sortArrayOfNumbers([4, 1, 2, 5]))//[1,2,4,5]
 console.log(numberOfZeros(100))//11
 console.log('Sum finder', sumFinder([6, 4, 3, 2, 1, 7], 9))//6,3
 console.log('Missing number is', findMissingNumber(arr)) // 44
