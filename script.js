@@ -220,9 +220,23 @@ const numberOfZeros = (number) => {
   return count
 }
 
-function sortArrayOfNumbers(arr) {
+const sortArrayOfNumbers = (arr) => {
   return arr.sort((a, b) => a - b)
 }
+const sortArrayOfNumbers1 = (arr) => {
+  let num;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j] > arr[j + 1]) {
+        num = arr[j];
+        arr[j] = arr[j + 1]
+        arr[j + 1] = num
+      }
+    }
+  }
+  return arr;
+}
+console.log(sortArrayOfNumbers1([4, 1, 2, 5]))//[1,2,4,5]
 console.log(sortArrayOfNumbers([4, 1, 2, 5]))//[1,2,4,5]
 console.log(numberOfZeros(100))//11
 console.log('Sum finder', sumFinder([6, 4, 3, 2, 1, 7], 9))//6,3
