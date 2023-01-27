@@ -272,10 +272,41 @@ const isValidBracketSequence = (str) => {
   }
   return true
 }
-console.log(isValidBracketSequence('[(){}'))//true
-console.log(sortArrayOfNumbers1([4, 1, 2, 5]))//[1,2,4,5]
-console.log(sortArrayOfNumbers([4, 1, 2, 5]))//[1,2,4,5]
-console.log(numberOfZeros(100))//11
+
+const countAndSortArray = (arr) => {
+
+  if (arr.length == 0) return []
+  let length = arr.length
+  let z = 0
+  let countArray = []
+
+  let sortedArray = []
+  for (let i = 0; i < length; i++) {
+    const arrItem = arr[i]
+    if (countArray[arrItem]) {
+      countArray[arrItem]++
+    } else {
+      countArray[arrItem] = 1
+    }
+  }
+  for (let j = 0; j < countArray.length; j++) {
+    if (!countArray[j]) {
+      countArray[j] = 0
+    }
+    for (let k = 0; k < countArray[j]; k++) {
+      sortedArray[z] = j
+      z++
+    }
+  }
+
+  return `count array: [${countArray}]\nsorted Array:[${sortedArray}]`
+}
+
+console.log(countAndSortArray([0, 0, 0, 3, 3, 3, 4, 4, 5, 5, 1, 1]))
+console.log('is valid bracket sequence', isValidBracketSequence('[(){}'))//false
+console.log('sort array method number 2', sortArrayOfNumbers1([4, 1, 2, 5]))//[1,2,4,5]
+console.log('sort array method number 1', sortArrayOfNumbers([4, 1, 2, 5]))//[1,2,4,5]
+console.log('Number of zeros', numberOfZeros(100))//11
 console.log('Sum finder', sumFinder([6, 4, 3, 2, 1, 7], 9))//6,3
 console.log('Missing number is', findMissingNumber(arr)) // 44
 console.log('is palindrome?:', isPalindrome('madam'))//true
