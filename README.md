@@ -1,4 +1,4 @@
 <div align ="center">
-## *Algorithms
-> Algorithms Q&A
+  <h1>Algorithms</h1>
 </div>
+> Algorithms Q&A
