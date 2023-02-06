@@ -1,5 +1,3 @@
-<div align="center">
 
-</div>
-##*Algorithms*
->Algorithms Q&A
+##* Algorithms *
+> Algorithms Q&A
