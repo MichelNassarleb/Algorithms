@@ -1,3 +1,5 @@
 ## *Algorithms 👋*
-> Algorithms Q&A 👏 >
+> Algorithms Q&A 👏 
+
+
 Challenge yourself by the 20 algorithms in the repository
