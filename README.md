@@ -1,1 +1,4 @@
-<h1 align:"center">Algorithms</h1>
+<div align="center">
+##*Algorithms*
+>Algorithms Q&A
+</div>
