@@ -1,3 +1,3 @@
 
-##* Algorithms *
+## * Algorithms *
 > Algorithms Q&A
