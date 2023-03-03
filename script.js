@@ -344,7 +344,7 @@ const findFirstOccurence =  (haystack, needle) =>{
   const haystackLength = haystack.length
   // Loop over the length of hackstack minus needle's 
   for(let i = 0; i<   haystackLength - needleLength + 1;  i++){
-      if(haystack.substring(i,needleLength) == needle){
+      if(haystack.substring(i,i + needleLength) == needle){
           return i
       }
   }
