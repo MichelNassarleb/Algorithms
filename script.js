@@ -1,4 +1,3 @@
-//
 
 const isPrime = (number) => {
   let divisor = 2;
@@ -331,6 +330,27 @@ const validateEmail = (str) => {
 }
 
 
+const findFirstOccurence =  (haystack, needle) =>{
+  // Base condition
+  if (haystack == null || needle == null) {
+      return -1;
+  }
+  // Special case
+  if (haystack === needle) {
+      return 0;
+  }
+  // length of the needle
+  const needleLength = needle.length
+  const haystackLength = haystack.length
+  // Loop over the length of hackstack minus needle's 
+  for(let i = 0; i<   haystackLength - needleLength + 1;  i++){
+      if(haystack.substring(i,needleLength) == needle){
+          return i
+      }
+  }
+  return -1
+};
+console.log('Find first occurence',findFirstOccurence('testing','test')) // 0
 console.log('is a valid email:', validateEmail('johndoe@gmail.com')) //true
 console.log(countAndSortArray([0, 0, 0, 3, 3, 3, 4, 4, 5, 5, 1, 1]))
 console.log('is valid bracket sequence', isValidBracketSequence('[(){}'))//false
