@@ -398,6 +398,25 @@ function divide(dividend, divisor) {
   }
   return sign === -1 ? -quotient : quotient;
   }
+  const convertTemperature = (celsius) => {
+    //Define the temperature object
+    let tempConverted = {Kevlin:0.0,Fahreheit:0.0}
+    //Define the return values array
+    let values=[]
+    //constraints
+    if(celsius <= 0 && celsius >= 1000){
+        return [celsius]
+    }
+    //convert the temperature 
+    tempConverted.Kelvin = (celsius + 273.15)
+    tempConverted.Fahrenheit =( celsius * 1.80 + 32.00)
+    //push the array with the converted values
+    values.push(tempConverted.Kelvin,tempConverted.Fahrenheit)
+    //return the values
+    return values
+};
+
+console.log('Converted temperature',convertTemperature(36.5)) //[309.65,97.7]
 console.log("DIVIDE TWO INTS", divide(7, 3))//2
 console.log("Find first occurence", findFirstOccurence("testing", "test")); // 0
 console.log("is a valid email:", validateEmail("johndoe@gmail.com")); //true
