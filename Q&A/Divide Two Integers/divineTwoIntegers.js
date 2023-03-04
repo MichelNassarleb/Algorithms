@@ -1,3 +1,5 @@
+//Given two integers say a and b. Find the quotient after dividing a by b without using multiplication, division, and mod operator.
+
 const divide = (dividend,divisor)=>{
     const MAX = 2147483647;
     const MIN = -2147483648;
