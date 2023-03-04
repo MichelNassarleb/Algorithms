@@ -416,6 +416,39 @@ function divide(dividend, divisor) {
     return values
 };
 
+const reverse = (num) => {
+  //define the res
+  let res = 0
+  let x = num
+  // Constraints on initial value
+  if(x < - Math.pow(2,31) || x > Math.pow(2,31)-1){
+      return 0
+  }
+  //Convert x to a positive number
+  x = Math.abs(x)
+  //While x is a truthy value(x>0)
+  while(!!x){
+      if(x < 10){ 
+          res = Math.floor(res) * 10 + Math.floor(x)
+          x = 0
+      }
+      else {
+      res = (Math.floor(res) * 10)+ (Math.floor(x) % 10)
+      x = x/10
+      }
+  }
+  // Constraints on res value
+  if(res < - Math.pow(2,31) || res > Math.pow(2,31)-1){
+      return 0
+  }
+  //return  minus the value if the initial number is negative
+  if(num < 0){
+      return -res
+  }
+  return res
+};
+
+console.log('Reversed Number of -312 is',reverse(-312)) // -213
 console.log('Converted temperature',convertTemperature(36.5)) //[309.65,97.7]
 console.log("DIVIDE TWO INTS", divide(7, 3))//2
 console.log("Find first occurence", findFirstOccurence("testing", "test")); // 0
