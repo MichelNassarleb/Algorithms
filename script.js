@@ -509,10 +509,22 @@ var twoSum = function(nums, target) {
       }
   }
 };
-
+const maxArea = (height) =>{
+  let i = 0
+  let j = height.length - 1
+  let max = 0
+  let area
+  while(i < j){
+      area = (j-i) * Math.min(height[i],height[j])
+      max = Math.max(area,max)
+      height[i] < height[j] ? i++ : j--
+  }
+  return max
+   }
 console.log('the index of the sum of two nums equal to 9 is',twoSum([0,2,7,5],9)) // [1,2]
 console.log('longest str', longestUniqueSubsttr('abcabcaa')) // 3
 
+console.log('max area',maxArea([9,8,6,2,5,4,8,3,7]))  // 56
 console.log('Reversed Number of -312 is',reverse(-312)) // -213
 console.log('Converted temperature',convertTemperature(36.5)) //[309.65,97.7]
 console.log("DIVIDE TWO INTS", divide(7, 3))//2
